@@ -1,0 +1,22 @@
+{% extends "layout/base.html" %}
+{% block content %}
+<form method="POST" class="card p-3 shadow-sm">
+  <h4 style="text-align:center">Edit Medicine</h4>
+  <div class="mb-3">
+    <label class="form-label">Name</label>
+    <input type="text" name="name" value="{{ med.name }}" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Type</label>
+    <input type="text" name="type" value="{{ med.type }}" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Stock</label>
+    <input type="number" name="stock" value="{{ med.stock }}" class="form-control" required>
+  </div>
+  <div class="btn-group">
+  <button type="submit" class="btn-save">Save</button>
+  <a href="/" class="btn-cancel">Cancel</a>
+  </div>
+</form>
+{% endblock %}

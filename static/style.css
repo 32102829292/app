@@ -1,0 +1,166 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+header{
+    background-color: #13192c;
+    color: #ffffff;
+    padding: 10px 0;
+}
+
+nav a.no-underline {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+
+nav a.no-underline:hover {
+    color: rgb(40, 40, 112) !important; 
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f4f8;
+    color: #0d1b2a;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.322);
+}
+
+table.table th {
+    background-color: rgba(4, 4, 15, 0.884) !important;
+    color: #fff !important;
+    text-align: center !important;
+}
+
+
+form .btn-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    gap: 10px; 
+}
+
+.btn-save {
+    flex: 1;
+    background-color: rgb(40, 40, 112);
+    color: white;
+    border: none;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-save:hover {
+    background-color: rgb(30, 30, 90);
+    transform: translateY(-2px);
+}
+
+.btn-cancel {
+    flex: 1;
+    background-color: rgb(200, 200, 220);
+    color: rgb(40, 40, 112);
+    border: none;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-cancel:hover {
+    background-color: rgb(180, 180, 210);
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+@media (max-width: 576px) {
+    form .btn-group {
+        flex-direction: column;
+    }
+
+    .btn-save,
+    .btn-cancel {
+        flex: unset;
+        width: 100%;
+    }
+}
+
+.btn-edit {
+    background-color: rgb(16, 14, 44);
+    color: white;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-edit:hover {
+    background-color: rgba(58, 68, 214, 0.418);
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+.btn-delete {
+    background-color: rgb(220, 53, 69);
+    color: white;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-delete:hover {
+    background-color: rgb(180, 40, 55);
+    transform: translateY(-2px);
+    text-decoration: none;
+}
+
+
+footer {
+    background-color: #13192c;
+    color: #ffffff;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 10px 0;
+}
